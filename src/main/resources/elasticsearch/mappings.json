@@ -1,0 +1,50 @@
+{
+    "properties": {
+        "taskId": {
+            "type": "long"
+        },
+        "teamId": {
+            "type": "long"
+        },
+        "name": {
+            "type": "text",
+            "analyzer": "custom_analyzer",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "description": {
+            "type": "text",
+            "analyzer": "custom_analyzer"
+        },
+        "status": {
+            "type": "keyword"
+        },
+        "priority": {
+            "type": "keyword"
+        },
+        "assignedUserId": {
+            "type": "long"
+        },
+        "labels": {
+            "type": "keyword"
+        },
+        "dueDate": {
+            "type": "date"
+        },
+        "estimatedEffort": {
+            "type": "double"
+        },
+        "comments": {
+            "type": "text",
+            "analyzer": "custom_analyzer"
+        },
+        "suggest": {
+            "type": "completion",
+            "analyzer": "custom_analyzer"
+        }
+    }
+}
