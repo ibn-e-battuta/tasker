@@ -1,0 +1,25 @@
+{
+    "analysis": {
+        "analyzer": {
+            "custom_analyzer": {
+                "type": "custom",
+                "tokenizer": "standard",
+                "char_filter": [
+                    "html_strip"
+                ],
+                "filter": [
+                    "lowercase",
+                    "asciifolding",
+                    "stop",
+                    "snowball",
+                    "word_delimiter_graph"
+                ]
+            }
+        }
+    },
+    "index": {
+        "number_of_shards": 1,
+        "number_of_replicas": 1,
+        "refresh_interval": "1s"
+    }
+}
